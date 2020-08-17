@@ -93,4 +93,15 @@ public class TopicServiceImpl implements TopicService {
         topicRepository.save(topicMapper.fromDto(topicDto));
         return true;
     }
+
+    //Y
+    @Override
+    public List<Topic> findAll() {
+        return topicRepository.findAll();
+    }
+
+    @Override
+    public List<String> findTestsByTopic(String name) {
+        return topicRepository.findTestsByTopic(name);
+    }
 }

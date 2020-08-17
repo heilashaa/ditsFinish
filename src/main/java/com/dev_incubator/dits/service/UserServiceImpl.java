@@ -109,4 +109,9 @@ public class UserServiceImpl implements UserService {
     public Integer countBlockUsers() {
         return userRepository.countByEnabledFalse();
     }
+    //Y
+    @Override
+    public User findUserById(Long id) {
+        return userRepository.findUserById(id);
+    }
 }

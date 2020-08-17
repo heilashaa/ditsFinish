@@ -53,13 +53,13 @@
         <put-attribute name="title" value="DITS | User test" />
         <put-attribute name="content" value="/WEB-INF/template/pages/userTest.jsp" />
     </definition>
-    <definition name="testPageY" extends="layout.definition">
+    <definition name="testPage" extends="layout.definition">
         <put-attribute name="title" value="DITS | Test page" />
-        <put-attribute name="content" value="/WEB-INF/template/pages/testPageY.jsp" />
+        <put-attribute name="content" value="/WEB-INF/template/pages/testPage.jsp" />
     </definition>
-    <definition name="resultPageY" extends="layout.definition">
+    <definition name="resultPage" extends="layout.definition">
         <put-attribute name="title" value="DITS | Test result" />
-        <put-attribute name="content" value="/WEB-INF/template/pages/resultPageY.jsp" />
+        <put-attribute name="content" value="/WEB-INF/template/pages/resultPage.jsp" />
     </definition>
     <definition name="404" extends="layout.definition">
         <put-attribute name="title" value="DITS | Error" />

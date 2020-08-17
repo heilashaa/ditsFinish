@@ -11,6 +11,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.sql.Timestamp;
 import java.util.*;
 
 @Service
@@ -33,6 +34,8 @@ public class StatisticServiceImpl implements StatisticService {
     private final MessageSourceFacade messageSource;
 
     private final UserMapper userMapper;
+
+    private final StatisticRepository statisticRepository;
 
     @Override
     public List<TestStatistic> getStatisticByTests() {
@@ -58,5 +61,35 @@ public class StatisticServiceImpl implements StatisticService {
     @Override
     public List<TopicStatistic> getStatisticByTopics() {
         return topicStatisticRepository.findAll();
+    }
+
+    //Y
+    @Override
+    public List<Statistic> findAllStatistics() {
+        return statisticRepository.findAll();
+    }
+
+    @Override
+    public void saveMapOfStat(Map<String, Statistic> map, Timestamp endTest) {
+        for (Statistic statistic : map.values()) {
+            statistic.setDate(endTest);
+            statisticRepository.save(statistic);
+        }
+    }
+
+    @Override
+    public void changeCorrectValue(Timestamp date, User user, Question question, boolean correct) {
+        statisticRepository.changeCorrectValue(date, user, question,
+                correct);
+    }
+
+    @Override
+    public List<Statistic> findAllByDate(Timestamp date) {
+        return statisticRepository.findAllByDate(date);
+    }
+
+    @Override
+    public List<Statistic> getAllByDate(Timestamp date) {
+        return statisticRepository.getAllByDate(date);
     }
 }

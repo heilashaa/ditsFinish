@@ -14,4 +14,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
     List<User> findAllByOrderByIdDesc();
 
     Integer countByEnabledFalse();
+
+    //Y
+    User findUserById(Long id);
 }

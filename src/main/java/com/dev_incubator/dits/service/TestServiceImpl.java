@@ -1,5 +1,7 @@
 package com.dev_incubator.dits.service;
 
+import com.dev_incubator.dits.persistence.entity.Question;
+import com.dev_incubator.dits.persistence.entity.Test;
 import com.dev_incubator.dits.persistence.repository.TestRepository;
 import com.dev_incubator.dits.service.dto.TestDto;
 import com.dev_incubator.dits.service.dto.mapper.TestMapper;
@@ -28,5 +30,20 @@ public class TestServiceImpl implements TestService {
         return tests;
 
     }
+    //Y
+    @Override
+    public List<Test> findAll() {
+        return testRepository.findAll();
+    }
 
+    @Override
+    public List<Test> findAllTestByTopicId(Long id) {
+        return testRepository.findAllTestByTopicId(id);
+    }
+
+    @Override
+    public List<Question> getQuestionsByTestName(String name) {
+
+        return testRepository.getQuestionsByTestName(name);
+    }
 }
