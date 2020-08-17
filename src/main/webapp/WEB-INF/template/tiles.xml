@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    <definition name="layout.definition" template="/WEB-INF/template/layout.jsp">
+        <put-attribute name="title" value="" />
+        <put-attribute name="navbar" value="/WEB-INF/template/pages/common/navbar.jsp" />
+        <put-attribute name="content" value="" />
+        <put-attribute name="footer" value="/WEB-INF/template/pages/common/footer.jsp" />
+    </definition>
+    <definition name="main" extends="layout.definition">
+        <put-attribute name="title" value="DITS | Main" />
+        <put-attribute name="content" value="/WEB-INF/template/pages/main.jsp" />
+    </definition>
+    <definition name="user-list" extends="layout.definition">
+        <put-attribute name="title" value="DITS | User list" />
+        <put-attribute name="content" value="/WEB-INF/template/pages/user-list.jsp" />
+    </definition>
+    <definition name="user" extends="layout.definition">
+        <put-attribute name="title" value="DITS | User" />
+        <put-attribute name="content" value="/WEB-INF/template/pages/user.jsp" />
+    </definition>
+    <definition name="user-profile" extends="layout.definition">
+        <put-attribute name="title" value="DITS | Your profile" />
+        <put-attribute name="content" value="/WEB-INF/template/pages/user-profile.jsp" />
+    </definition>
+    <definition name="login" extends="layout.definition">
+        <put-attribute name="title" value="DITS | Login" />
+        <put-attribute name="content" value="/WEB-INF/template/pages/login.jsp" />
+    </definition>
+    <definition name="registration" extends="layout.definition">
+        <put-attribute name="title" value="DITS | Registration" />
+        <put-attribute name="content" value="/WEB-INF/template/pages/registration.jsp" />
+    </definition>
+    <definition name="topic" extends="layout.definition">
+        <put-attribute name="title" value="DITS | Topic" />
+        <put-attribute name="content" value="/WEB-INF/template/pages/topic.jsp" />
+    </definition>
+    <definition name="test-list" extends="layout.definition">
+        <put-attribute name="title" value="DITS | Tests" />
+        <put-attribute name="content" value="/WEB-INF/template/pages/test-list.jsp" />
+    </definition>
+    <definition name="statistic" extends="layout.definition">
+        <put-attribute name="title" value="DITS | Statistic" />
+        <put-attribute name="content" value="/WEB-INF/template/pages/statistic.jsp" />
+    </definition>
+    <definition name="userChoose" extends="layout.definition">
+        <put-attribute name="title" value="DITS | Choose test" />
+        <put-attribute name="content" value="/WEB-INF/template/pages/userChoose.jsp" />
+    </definition>
+    <definition name="userTest" extends="layout.definition">
+        <put-attribute name="title" value="DITS | User test" />
+        <put-attribute name="content" value="/WEB-INF/template/pages/userTest.jsp" />
+    </definition>
+    <definition name="testPageY" extends="layout.definition">
+        <put-attribute name="title" value="DITS | Test page" />
+        <put-attribute name="content" value="/WEB-INF/template/pages/testPageY.jsp" />
+    </definition>
+    <definition name="resultPageY" extends="layout.definition">
+        <put-attribute name="title" value="DITS | Test result" />
+        <put-attribute name="content" value="/WEB-INF/template/pages/resultPageY.jsp" />
+    </definition>
+    <definition name="404" extends="layout.definition">
+        <put-attribute name="title" value="DITS | Error" />
+        <put-attribute name="content" value="/WEB-INF/template/pages/errors/404.jsp" />
+    </definition>
+    <definition name="403" extends="layout.definition">
+        <put-attribute name="title" value="DITS | Error" />
+        <put-attribute name="content" value="/WEB-INF/template/pages/errors/403.jsp" />
+    </definition>
+    <definition name="400" extends="layout.definition">
+        <put-attribute name="title" value="DITS | Error" />
+        <put-attribute name="content" value="/WEB-INF/template/pages/errors/400.jsp" />
+    </definition>
+    <definition name="405" extends="layout.definition">
+        <put-attribute name="title" value="DITS | Error" />
+        <put-attribute name="content" value="/WEB-INF/template/pages/errors/405.jsp" />
+    </definition>
+    <definition name="500" extends="layout.definition">
+        <put-attribute name="title" value="DITS | Error" />
+        <put-attribute name="content" value="/WEB-INF/template/pages/errors/500.jsp" />
+    </definition>
+</tiles-definitions>
